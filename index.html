@@ -9,21 +9,66 @@
 <x-dc>
 <helmet>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="_ds/modernist-3a71b0aa-03ad-4432-8eaa-b09fd7afdc9b/styles.css">
-<script src="_ds/modernist-3a71b0aa-03ad-4432-8eaa-b09fd7afdc9b/_ds_bundle.js"></script>
-<script src="./image-slot.js"></script>
+<link rel="stylesheet" href="./styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Noto+Serif+KR:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@400;500;600&display=swap">
 <style>
+  :root {
+    --color-bg: #f8f6f2;
+    --color-surface: #f0ede6;
+    --color-text: #1a1a1a;
+    --color-accent: #d93d1a;
+    --color-accent-700: #b52f12;
+    --color-divider: #e2ddd5;
+  }
+
   html { -webkit-text-size-adjust: 100%; }
-  body { margin:0; background:var(--color-bg); color:var(--color-text);
-    font-family:"Archivo","Noto Sans KR",system-ui,sans-serif; font-size:15px; line-height:1.6;
-    overflow-x:hidden; }
-  h1,h2,h3,h4,h5,h6 { font-family:"Archivo","Noto Sans KR",system-ui,sans-serif; font-weight:800; letter-spacing:-0.02em; }
-  p { text-wrap:pretty; }
-  img { max-width:100%; }
-  a { color:var(--color-accent); text-decoration:none; }
-  a:hover { color:var(--color-accent-700); text-decoration:underline; text-underline-offset:3px; }
+  body { 
+    margin: 0; 
+    background: var(--color-bg); 
+    color: var(--color-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; 
+    font-size: 15px; 
+    line-height: 1.6;
+    overflow-x: hidden; 
+  }
+  h1,h2,h3,h4,h5,h6 { 
+    font-family: 'Noto Serif KR', serif; 
+    font-weight: 700; 
+    letter-spacing: -0.02em; 
+  }
+  p { text-wrap: pretty; }
+  img { max-width: 100%; }
+  a { color: var(--color-accent); text-decoration: none; }
+  a:hover { color: var(--color-accent-700); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* 버튼 및 그라데이션 스타일 */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-decoration: none !important;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+  }
+  .btn-primary {
+    background: var(--color-accent) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--color-accent) !important;
+  }
+  .btn-primary:hover {
+    background: var(--color-accent-700) !important;
+  }
+  .btn-secondary {
+    background: transparent !important;
+    color: var(--color-text) !important;
+    border: 1px solid var(--color-divider) !important;
+  }
+  .btn-secondary:hover {
+    border-color: var(--color-text) !important;
+  }
 </style>
 </helmet>
 
